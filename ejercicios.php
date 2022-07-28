@@ -153,8 +153,11 @@ switch ($opciones) {
 </html>
         ';
         break;
+
     case 3:
 
+        error_reporting(0);
+        $Definitiva = ($_POST['num1'] + $_POST['num2'] + $_POST['num3'])/3;
         echo '
         <!doctype html>
 <html lang="es">
@@ -169,7 +172,7 @@ switch ($opciones) {
 <body class="row align-items-center justify-content-center vh-50">
 
 
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem; margin-top: 5em;">
         <div class="card-body">
         <form action="ejercicios.php" method="POST">
         <input type="hidden" class="form-control" name="ejercicios" value="' . $opciones . '" type="number">
@@ -183,7 +186,7 @@ switch ($opciones) {
         
     </form>
     <br>
-    <p> la suma es: ' . $sumar . ' </p>
+    <p> la nota definitica es de: '.$Definitiva.' </p>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
