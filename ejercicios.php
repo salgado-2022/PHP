@@ -1,11 +1,12 @@
 <?php
-
+error_reporting(0);
 $opciones = $_POST['ejercicios'];
 $operaciones = $_POST['operaciones'];
 
-error_reporting(0);
+
 switch ($opciones) {
     case 1:
+        error_reporting(0);
         $sumar = ($_POST['num1'] + $_POST['num2'] + $_POST['num3']);
         echo '
         <!doctype html>
@@ -46,6 +47,7 @@ switch ($opciones) {
 
 
     case 2:
+        error_reporting(0);
         echo '
         <!doctype html>
 <html lang="en">
